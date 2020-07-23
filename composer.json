@@ -11,10 +11,19 @@
     ],
     "minimum-stability": "dev",
     "require": {},
-    "autoload-dev": {
+    "autoload": {
         "psr-4": {
-            "FarukHaiderBD\\ShoppingCart\\": "/src"
-
+            "FarukHaiderBD\\ShoppingCart\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "FarukHaiderBD\\ShoppingCart\\ShoppingCartServiceProvider"
+            ],
+            "aliases": {
+                "Cart": "FarukHaiderBD\\ShoppingCart\\Facades\\ShoppingCartFacade"
+            }
         }
     }
 }
